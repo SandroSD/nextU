@@ -82,11 +82,11 @@
     
     `
 
-    .rejilla {
-        display: grid;
-        grid-template-columns: 50px auto 20%;
-        grid-template-rows: 70% 30%;
-    }
+        .rejilla {
+            display: grid;
+            grid-template-columns: 50px auto 20%;
+            grid-template-rows: 70% 30%;
+        }
 
     `
 
@@ -96,18 +96,18 @@
     
     `
 
-    .rejilla {
-        display: grid;
-        grid-template-columns: 50px auto 20%;
-        grid-template-rows: 70% 30%;
-    }
+        .rejilla {
+            display: grid;
+            grid-template-columns: 50px auto 20%;
+            grid-template-rows: 70% 30%;
+        }
 
-    .elemento-a {
-        grid-row-start: 1;
-        grid-row-end: 3;
-        grid-column-start: 1;
-        grid-column-end: 2;
-    }
+        .elemento-a {
+            grid-row-start: 1;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
 
     `
 
@@ -115,25 +115,25 @@
 
     `
 
-    .rejilla {
-        display: grid;
-        grid-template-columns: 50px auto 20%;
-        grid-template-rows: 70% 30%;
-    }
+        .rejilla {
+            display: grid;
+            grid-template-columns: 50px auto 20%;
+            grid-template-rows: 70% 30%;
+        }
 
-    .elemento-a {
-        grid-row-start: 1;
-        grid-row-end: 3;
-        grid-column-start: 1;
-        grid-column-end: 2;
-    }
+        .elemento-a {
+            grid-row-start: 1;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
 
-    .elemento-b {
-        grid-row-start: 1;
-        grid-row-end: 2;
-        grid-column-start: 2;
-        grid-column-end: 4;
-    }
+        .elemento-b {
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
 
     `
 
@@ -141,40 +141,6 @@
 
     `
 
-    .rejilla {
-        display: grid;
-        grid-template-columns: 50px auto 20%;
-        grid-template-rows: 70% 30%;
-    }
-
-    .elemento-a {
-        grid-row-start: 1;
-        grid-row-end: 3;
-        grid-column-start: 1;
-        grid-column-end: 2;
-    }
-
-    .elemento-b {
-        grid-row-start: 1;
-        grid-row-end: 2;
-        grid-column-start: 2;
-        grid-column-end: 4;
-    }
-
-    .elemento-c {
-        grid-row-start: 2;
-        grid-row-end: 3;
-        grid-column-start: 2;
-        grid-column-end: 3;
-    }
-
-    `
-
-    - La Figura 5 muestra cómo deseamos que se vea el elemento D en la rejilla. [Figura_5]
-
-    `
-
-    <style>
         .rejilla {
             display: grid;
             grid-template-columns: 50px auto 20%;
@@ -202,20 +168,54 @@
             grid-column-end: 3;
         }
 
-        .elemento-d {
-            grid-row-start: 2;
-            grid-row-end: 3;
-            grid-column-start: 3;
-            grid-column-end: 4;
-        }
-    </style>
+    `
 
-    <div class="rejilla">
-        <div class="elemento-a">A</div>
-        <div class="elemento-b">B</div>
-        <div class="elemento-c">C</div>
-        <div class="elemento-d">D</div>
-    </div>
+    - La Figura 5 muestra cómo deseamos que se vea el elemento D en la rejilla. [Figura_5]
+
+    `
+
+        <style>
+            .rejilla {
+                display: grid;
+                grid-template-columns: 50px auto 20%;
+                grid-template-rows: 70% 30%;
+            }
+
+            .elemento-a {
+                grid-row-start: 1;
+                grid-row-end: 3;
+                grid-column-start: 1;
+                grid-column-end: 2;
+            }
+
+            .elemento-b {
+                grid-row-start: 1;
+                grid-row-end: 2;
+                grid-column-start: 2;
+                grid-column-end: 4;
+            }
+
+            .elemento-c {
+                grid-row-start: 2;
+                grid-row-end: 3;
+                grid-column-start: 2;
+                grid-column-end: 3;
+            }
+
+            .elemento-d {
+                grid-row-start: 2;
+                grid-row-end: 3;
+                grid-column-start: 3;
+                grid-column-end: 4;
+            }
+        </style>
+
+        <div class="rejilla">
+            <div class="elemento-a">A</div>
+            <div class="elemento-b">B</div>
+            <div class="elemento-c">C</div>
+            <div class="elemento-d">D</div>
+        </div>
 
     `
 
