@@ -16,8 +16,10 @@
     - Ejemplo:
 
     `
+
         .image {
             -webkit-filter: blur(30px);
             filter: blur(30px);
         }
+
     `

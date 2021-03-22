@@ -6,22 +6,27 @@
     
     - Ejemplo 1:
 
-    #contenedor {
-        width: 1000px;
-        height: 600px;
-        border: 2px solid;
-        margin: 0 auto;
-        background-color: blue;
-        transition: background 1s;
-    }
+    `
 
-    #contenedor: hover {
-        background-color: yellow;
-    }
+        #contenedor {
+            width: 1000px;
+            height: 600px;
+            border: 2px solid;
+            margin: 0 auto;
+            background-color: blue;
+            transition: background 1s;
+        }
+
+        #contenedor: hover {
+            background-color: yellow;
+        }
+
+    `
 
     - Ejemplo 2:
 
     `
+
         #contenedor img {
             width: 200px;
             height: 200px;
@@ -33,6 +38,7 @@
             width: 100%;
             height: 100%;
         }
+
     `
 
 - @keyframe: animación personalizada a la que le podemos dar un nombre y especificar detalladamente que queremos que suceda durante toda la animación.
@@ -44,6 +50,7 @@
         - Keyframes por porcentaje:
 
         `
+
             10% {
                 color: white;
             }
@@ -57,11 +64,13 @@
             100% {
                 color: white;
             }
+
         `
 
         - Keyframes exactos:
 
         `
+
             from: {
                 color: white;
             }
@@ -69,9 +78,11 @@
             to: {
                 color: red;
             }
+
         `
 
         `
+
             #contenedor {
                 width: 1000px;
                 height: 600px;
@@ -128,4 +139,5 @@
                     float: left;
                 }
             }
+
         `
