@@ -7,6 +7,7 @@
     - Ejemplo 1:
 
     `
+
         #contenedor {
             width: 1000px;
             height: 600px;
@@ -19,6 +20,7 @@
         #contenedor: hover {
             background-color: yellow;
         }
+
     `
 
     - Ejemplo 2:
