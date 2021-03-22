@@ -6,22 +6,18 @@
     
     - Ejemplo 1:
 
-    `
+    #contenedor {
+        width: 1000px;
+        height: 600px;
+        border: 2px solid;
+        margin: 0 auto;
+        background-color: blue;
+        transition: background 1s;
+    }
 
-        #contenedor {
-            width: 1000px;
-            height: 600px;
-            border: 2px solid;
-            margin: 0 auto;
-            background-color: blue;
-            transition: background 1s;
-        }
-
-        #contenedor: hover {
-            background-color: yellow;
-        }
-
-    `
+    #contenedor: hover {
+        background-color: yellow;
+    }
 
     - Ejemplo 2:
 
