@@ -51,7 +51,5 @@
 		- Ejemplo:
 
 		`
-
 			<div class="medium-3 large-3 end columns">Bloque</div>
-
 		`
