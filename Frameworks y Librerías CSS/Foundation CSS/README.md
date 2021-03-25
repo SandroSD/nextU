@@ -50,5 +50,7 @@
 	- la clase end nos permite dejar espacio al final de la fila.
 		- Ejemplo:
 		`
+
 			<div class="medium-3 large-3 end columns">Bloque</div>
+
 		`
