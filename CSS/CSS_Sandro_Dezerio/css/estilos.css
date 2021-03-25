@@ -1,0 +1,735 @@
+html,
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+ul,
+form,
+footer,
+header,
+menu,
+nav {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+:root {
+	--color_fondo_header: #bd544d;
+	--color_letra_header: #fff;
+	--color_fondo_secundario: #fdfced;
+	--color_borde_formulario: #f7b787;
+	--fuente_titulos: cursive;
+	--fuente_secundaria: sans-serif;
+}
+
+header {
+	background-color: var(--color_fondo_header);
+	color: var(--color_letra_header);
+}
+
+ul li {
+	display: inline;
+	font-weight: bold;
+	font-size: 1em;
+}
+
+header nav ul li a {
+	color: var(--color_letra_header);
+	text-decoration: none;
+}
+
+h2 {
+	font-family: var(--fuente_titulos);
+}
+
+p {
+	font-family: var(--fuente_secundaria);
+}
+
+@media (min-width: 721px) {
+	header {
+		display: grid;
+		grid-template-columns: 15% 85%;
+		font-family: var(--fuente_titulos);
+		padding: 0.2em;
+	}
+
+	header h1 {
+		text-align: right;
+		padding-right: 0.3em;
+	}
+
+	header nav ul {
+		padding-top: 1em;
+	}
+
+	main {
+		background-color: var(--color_fondo_secundario);
+	}
+
+	main .principal .contenido {
+		position: absolute;
+		left: 35vw;
+		top: 10vh;
+	}
+
+	main .principal .imagen-principal :hover {
+		filter: grayscale(75%);
+		transform: rotateY(35deg);
+	}
+
+	main .principal .contenido .descripcion {
+		position: relative;
+		background-color: rgba(255, 255, 255, 0.5);
+		border-radius: 15px;
+		padding: 1em;
+		text-align: center;
+	}
+
+	main .principal .contenido .descripcion * {
+		padding: 0.2em;
+	}
+
+	main #playa .contenido {
+		margin-top: 2.5em;
+		display: grid;
+		grid-template-columns: 30% auto 30%;
+		grid-template-rows: 100%;
+
+		text-align: center;
+	}
+	
+	main #playa .contenido .imagen-principal {
+		grid-row-start: 1;
+		grid-row-end: 2;
+		grid-column-start: 1;
+		grid-column-end: 2;
+	}
+
+	main #playa .contenido .imagen-principal img {
+		width: 75%;
+		border-radius: 15px;
+	}
+
+	main #playa .contenido .descripcion {
+		grid-row-start: 1;
+		grid-row-end: 2;
+		grid-column-start: 2;
+		grid-column-end: 3;
+	}
+
+	main #playa .contenido .descripcion h2 {
+		font-size: 5em;
+		margin-bottom: 0.5em;
+	}
+
+	main #playa .contenido .descripcion p {
+		font-size: 1.2em;
+	}
+
+	main #playa .contenido .imagen-secundaria {
+		grid-row-start: 1;
+		grid-row-end: 2;
+		grid-column-start: 3;
+		grid-column-end: 4;
+	}
+
+	main #playa .contenido .imagen-secundaria img {
+		width: 75%;
+		border-radius: 15px;
+	}
+
+	main #parque .contenido {
+		margin-top: 2.5em;
+		display: grid;
+		grid-template-columns: 30% auto 30%;
+		grid-template-rows: 100%;
+
+		text-align: center;
+	}
+	
+	main #parque .contenido .imagen-principal {
+		grid-row-start: 1;
+		grid-row-end: 2;
+		grid-column-start: 1;
+		grid-column-end: 2;
+	}
+
+	main #parque .contenido .imagen-principal img {
+		width: 75%;
+		border-radius: 15px;
+	}
+
+	main #parque .contenido .descripcion {
+		grid-row-start: 1;
+		grid-row-end: 2;
+		grid-column-start: 2;
+		grid-column-end: 3;
+	}
+
+	main #parque .contenido .descripcion h2 {
+		font-size: 5em;
+		margin-bottom: 0.5em;
+	}
+
+	main #parque .contenido .descripcion p {
+		font-size: 1.2em;
+	}
+
+	main #parque .contenido .imagen-secundaria {
+		grid-row-start: 1;
+		grid-row-end: 2;
+		grid-column-start: 3;
+		grid-column-end: 4;
+	}
+
+	main #parque .contenido .imagen-secundaria img {
+		width: 75%;
+		border-radius: 15px;
+	}
+
+	main #rio .contenido {
+		margin-top: 2.5em;
+		display: grid;
+		grid-template-columns: 30% auto 30%;
+		grid-template-rows: 100%;
+
+		text-align: center;
+	}
+	
+	main #rio .contenido .imagen-principal {
+		grid-row-start: 1;
+		grid-row-end: 2;
+		grid-column-start: 1;
+		grid-column-end: 2;
+	}
+
+	main #rio .contenido .imagen-principal img {
+		width: 75%;
+		border-radius: 15px;
+	}
+
+	main #rio .contenido .descripcion {
+		grid-row-start: 1;
+		grid-row-end: 2;
+		grid-column-start: 2;
+		grid-column-end: 3;
+	}
+
+	main #rio .contenido .descripcion h2 {
+		font-size: 5em;
+		margin-bottom: 0.5em;
+	}
+
+	main #rio .contenido .descripcion p {
+		font-size: 1.2em;
+	}
+
+	main #rio .contenido .imagen-secundaria {
+		grid-row-start: 1;
+		grid-row-end: 2;
+		grid-column-start: 3;
+		grid-column-end: 4;
+	}
+
+	main #rio .contenido .imagen-secundaria img {
+		width: 75%;
+		border-radius: 15px;
+	}
+
+	footer {
+		margin-top: 2.5em;
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 100%;
+	}
+
+	footer .informacion {
+		grid-row-start: 1;
+		grid-row-end: 2;
+		grid-column-start: 1;
+		grid-column-end: 2;
+
+		padding: 3.5em;
+	}
+
+	footer .contacto {
+		grid-row-start: 1;
+		grid-row-end: 2;
+		grid-column-start: 2;
+		grid-column-end: 3;
+
+		padding: 3.5em;
+		width: 75%;
+		border: 3px solid var(--color_borde_formulario);
+		background-color: var(--color_fondo_secundario);
+		border-radius: 15px;
+	}
+
+	footer .contacto h3 {
+		font-weight: bold;
+		margin-bottom: 0.5em;
+	}
+
+	footer .contacto form input {
+		width: 100%;
+		border: 1px solid var(--color_borde_formulario);
+	}
+
+	footer .contacto form textarea {
+		width: 100%;
+		border: 1px solid var(--color_borde_formulario);
+	}
+
+	footer .contacto form button {
+		background-color: var(--color_borde_formulario);
+		padding: 1em;
+		border-radius: 15px;
+		font-weight: bold;
+	}
+}
+
+@media (min-width: 421px) and (max-width: 720px) {
+	header {
+		display: grid;
+		grid-template-columns: 50% 50%;
+		font-family: var(--fuente_titulos);
+		padding: 0.2em;
+		text-align: center;
+	}
+
+	header h1 {
+		text-align: right;
+		padding-right: 0.3em;
+	}
+
+	header nav ul {
+		text-align: left;
+		padding-top: 1em;
+	}
+
+	main {
+		background-color: var(--color_fondo_secundario);
+	}
+
+	main .principal .contenido {
+		position: absolute;
+		left: 10vw;
+		top: 10vh;
+	}
+
+	main .principal .imagen-principal :hover {
+		filter: grayscale(75%);
+		transform: rotateY(35deg);
+	}
+
+	main .principal .contenido .descripcion {
+		position: relative;
+		background-color: rgba(255, 255, 255, 0.5);
+		border-radius: 15px;
+		padding: 1em;
+		text-align: center;
+	}
+
+	main .principal .contenido .descripcion * {
+		padding: 0.2em;
+	}
+
+	main #playa .contenido {
+		margin-top: 2.5em;
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 100%;
+
+		text-align: center;
+	}
+	
+	main #playa .contenido .imagen-principal {
+		display: none;
+	}
+
+	main #playa .contenido .descripcion {
+		grid-row-start: 1;
+		grid-row-end: 2;
+		grid-column-start: 1;
+		grid-column-end: 2;
+	}
+
+	main #playa .contenido .imagen-secundaria {
+		grid-row-start: 1;
+		grid-row-end: 2;
+		grid-column-start: 2;
+		grid-column-end: 3;
+	}
+
+	main #playa .contenido .descripcion h2 {
+		font-size: 5em;
+		margin-bottom: 0.5em;
+	}
+
+	main #playa .contenido .descripcion p {
+		font-size: 1.2em;
+	}
+
+	main #playa .contenido .imagen-secundaria img {
+		width: 75%;
+		border-radius: 15px;
+	}
+
+	main #parque .contenido {
+		margin-top: 2.5em;
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 100%;
+
+		text-align: center;
+	}
+	
+	main #parque .contenido .imagen-principal {
+		display: none;
+	}
+
+	main #parque .contenido .descripcion {
+		grid-row-start: 1;
+		grid-row-end: 2;
+		grid-column-start: 1;
+		grid-column-end: 2;
+	}
+
+	main #parque .contenido .imagen-secundaria {
+		grid-row-start: 1;
+		grid-row-end: 2;
+		grid-column-start: 2;
+		grid-column-end: 3;
+	}
+
+	main #parque .contenido .descripcion h2 {
+		font-size: 5em;
+		margin-bottom: 0.5em;
+	}
+
+	main #parque .contenido .descripcion p {
+		font-size: 1.2em;
+	}
+
+	main #parque .contenido .imagen-secundaria img {
+		width: 75%;
+		border-radius: 15px;
+	}
+
+	main #rio .contenido {
+		margin-top: 2.5em;
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 100%;
+
+		text-align: center;
+	}
+	
+	main #rio .contenido .imagen-principal {
+		display: none;
+	}
+
+	main #rio .contenido .descripcion {
+		grid-row-start: 1;
+		grid-row-end: 2;
+		grid-column-start: 1;
+		grid-column-end: 2;
+	}
+
+	main #rio .contenido .descripcion h2 {
+		font-size: 5em;
+		margin-bottom: 0.5em;
+	}
+
+	main #rio .contenido .descripcion p {
+		font-size: 1.2em;
+	}
+
+	main #rio .contenido .imagen-secundaria {
+		grid-row-start: 1;
+		grid-row-end: 2;
+		grid-column-start: 2;
+		grid-column-end: 3;
+	}
+
+	main #rio .contenido .imagen-secundaria img {
+		width: 75%;
+		border-radius: 15px;
+	}
+
+	footer {
+		margin-top: 2.5em;
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 100%;
+
+		text-align: center;
+	}
+
+	footer .informacion {
+		grid-row-start: 1;
+		grid-row-end: 2;
+		grid-column-start: 1;
+		grid-column-end: 2;
+
+		padding: 1.5em;
+	}
+
+	footer .contacto {
+		grid-row-start: 1;
+		grid-row-end: 2;
+		grid-column-start: 2;
+		grid-column-end: 3;
+
+		padding: 1.5em;
+		width: 75%;
+		border: 3px solid var(--color_borde_formulario);
+		background-color: var(--color_fondo_secundario);
+		border-radius: 15px;
+	}
+
+	footer .contacto h3 {
+		font-weight: bold;
+		margin-bottom: 0.5em;
+	}
+
+	footer .contacto form input {
+		width: 100%;
+		border: 1px solid var(--color_borde_formulario);
+	}
+
+	footer .contacto form textarea {
+		width: 100%;
+		border: 1px solid var(--color_borde_formulario);
+	}
+
+	footer .contacto form button {
+		background-color: var(--color_borde_formulario);
+		padding: 1em;
+		border-radius: 15px;
+		font-weight: bold;
+	}
+}
+
+@media (max-width: 420px) {
+	header {
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: 50% 50%;
+		font-family: var(--fuente_titulos);
+		padding: 0.2em;
+		text-align: center;
+	}
+
+	main {
+		background-color: var(--color_fondo_secundario);
+	}
+
+	main .principal .contenido {
+		position: absolute;
+		left: 5vw;
+		top: 20vh;
+	}
+
+	main .principal .contenido .descripcion {
+		position: relative;
+		background-color: rgba(255, 255, 255, 0.5);
+		border-radius: 15px;
+		padding: 1em;
+		text-align: center;
+	}
+
+	main .principal .contenido .descripcion * {
+		padding: 0.2em;
+	}
+
+	main .principal .imagen-principal :hover {
+		filter: grayscale(75%);
+		transform: rotateY(35deg);
+	}
+
+	main #playa .contenido {
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: 50% 50%;
+
+		text-align: center;
+	}
+	
+	main #playa .contenido .imagen-principal {
+		display: none;
+	}
+
+	main #playa .contenido .descripcion {
+		grid-row-start: 1;
+		grid-row-end: 2;
+		grid-column-start: 1;
+		grid-column-end: 2;
+	}
+
+	main #playa .contenido .imagen-secundaria {
+		grid-row-start: 2;
+		grid-row-end: 3;
+		grid-column-start: 1;
+		grid-column-end: 2;
+	}
+
+	main #playa .contenido .descripcion h2 {
+		font-size: 4em;
+	}
+
+	main #playa .contenido .descripcion p {
+		font-size: 1em;
+		margin: 0.5em 0;
+	}
+
+	main #playa .contenido .imagen-secundaria img {
+		width: 60%;
+		border-radius: 15px;
+	}
+
+	main #parque .contenido {
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: 50% 50%;
+
+		text-align: center;
+	}
+	
+	main #parque .contenido .imagen-principal {
+		display: none;
+	}
+
+	main #parque .contenido .descripcion {
+		grid-row-start: 1;
+		grid-row-end: 2;
+		grid-column-start: 1;
+		grid-column-end: 2;
+	}
+
+	main #parque .contenido .imagen-secundaria {
+		grid-row-start: 2;
+		grid-row-end: 3;
+		grid-column-start: 1;
+		grid-column-end: 2;
+	}
+
+	main #parque .contenido .descripcion h2 {
+		font-size: 4em;
+	}
+
+	main #parque .contenido .descripcion p {
+		font-size: 1em;
+		margin: 0.5em 0;
+	}
+
+	main #parque .contenido .imagen-secundaria img {
+		width: 60%;
+		border-radius: 15px;
+	}
+
+	main #rio .contenido {
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: 50% 50%;
+
+		text-align: center;
+	}
+	
+	main #rio .contenido .imagen-principal {
+		display: none;
+	}
+
+	main #rio .contenido .descripcion {
+		grid-row-start: 1;
+		grid-row-end: 2;
+		grid-column-start: 1;
+		grid-column-end: 2;
+	}
+
+	main #rio .contenido .descripcion h2 {
+		font-size: 4em;
+	}
+
+	main #rio .contenido .descripcion p {
+		font-size: 1em;
+		margin: 0.5em 0;
+	}
+
+	main #rio .contenido .imagen-secundaria {
+		grid-row-start: 2;
+		grid-row-end: 3;
+		grid-column-start: 1;
+		grid-column-end: 2;
+	}
+
+	main #rio .contenido .imagen-secundaria img {
+		width: 60%;
+		border-radius: 15px;
+	}
+
+	footer {
+		margin-top: 2.5em;
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: 50% 50%;
+
+		text-align: center;
+	}
+
+	footer .informacion {
+		grid-row-start: 1;
+		grid-row-end: 2;
+		grid-column-start: 1;
+		grid-column-end: 2;
+
+		padding: 1.5em;
+	}
+
+	footer .contacto {
+		grid-row-start: 3;
+		grid-row-end: 4;
+		grid-column-start: 1;
+		grid-column-end: 2;
+
+		padding: 1.5em;
+		margin: 0 auto;
+		width: 75%;
+		border: 3px solid var(--color_borde_formulario);
+		background-color: var(--color_fondo_secundario);
+		border-radius: 15px;
+
+	}
+
+	footer .contacto h3 {
+		font-weight: bold;
+		margin-bottom: 0.5em;
+	}
+
+	footer .contacto form input {
+		width: 100%;
+		border: 1px solid var(--color_borde_formulario);
+	}
+
+	footer .contacto form textarea {
+		width: 100%;
+		border: 1px solid var(--color_borde_formulario);
+	}
+
+	footer .contacto form button {
+		background-color: var(--color_borde_formulario);
+		padding: 1em;
+		border-radius: 15px;
+		font-weight: bold;
+	}
+}
