@@ -48,8 +48,145 @@
 
 	- (small/medium/large)-offset-3: Permite mover bloques hacia la derecha de la rejilla. "Prefijo adaptativo"-"offset"-(numero de filas).
 	- la clase end nos permite dejar espacio al final de la fila.
+	- collapse: no haya espacio entre columnas.
+	- uncollapse: espacio entre columnas.
+
 		- Ejemplo:
 
 		`
-			<div class="medium-3 large-3 end columns">Bloque</div>
+
+			<div class="row medium-uncollapse large-collapse">
+				<div class="medium-3 large-3 columns">Bloque 1</div>
+				<div class="medium-3 large-3 columns">Bloque 2</div>
+				<div class="medium-3 large-3 end columns">Bloque 3</div>
+			</div>
+
 		`
+
+	- centered: centrar un bloque en una fila.
+	- uncentered: quitar efecto de centrar un bloque.
+
+		- Ejemplo:
+
+		`
+		
+			<div class="row">
+				<div class="medium-3 medium-centered large-uncentered columns">1 bloque</div>
+			</div>
+
+		`
+
+	- push: cambiar posiciones del bloque en el grid. Mover a la derecha.
+	- pull: cambiar posiciones del bloque en el grid. Mover a la izquierda.
+
+		- Ejemplo:
+
+		`
+		
+			<div class="row">
+				<div class="small-8 small-push-4 columns">8 push -></div>
+				<div class="small-4 small-pull-8 columns">4 pull <-</div>
+			</div>
+		
+		`
+
+- Flex Grid:
+
+	- consiste en una estructura de la pagina basada en flex box y no en columnas. Descarga personalizada en flex grid.
+
+	Ejemplo:
+
+	`
+	
+		<div class="row">
+			<div class="small-5 medium-4 large-3 columns">
+				<div class="callout primary">Columna 1</div>
+			</div>
+			<div class="small-7 medium-8 large-9 columns">
+				<div class="callout primary">Columna 2</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="small-6 medium-3 large-5 columns">
+				<div class="callout primary">Columna 1</div>
+			</div>
+			<div class="columns">
+				<div class="callout primary">Columna 2</div>
+			</div>
+		</div>
+	
+	`
+
+	- Este ultimo ejemplo de la segunda columna no tiene definición del tamaño. Ocupará el ancho restante dependiendo de la dimensión de la página.
+
+	- shrink: indica a la columna que el tamaño de la columna se dará en base al contenido que posea.
+
+		- Ejemplo:
+
+		`
+
+			<div class="row">
+				<div class="columns">
+					<div class="callout primary">Columna 1</div>
+				</div>
+				<div class="columns shrink">
+					<div class="callout primary">Columna 2</div>
+				</div>
+			</div>
+
+		`
+	
+	- expand: indica a la columna que ocupe el tamaño disponible en su contenedor. Es útil cuando hay cambio de estructuración entre dispositivos.
+
+		- Ejemplo:
+
+		`
+
+			<div class="row">
+				<div class="small-12 medium-expand columns">
+					<div class="callout primary">Columna 1</div>
+				</div>
+				<div class="small-12 medium-expand columns">
+					<div class="callout primary">Columna 2</div>
+				</div>
+				<div class="small-12 medium-expand columns">
+					<div class="callout primary">Columna 3</div>
+				</div>
+				<div class="small-12 medium-expand columns">
+					<div class="callout primary">Columna 4</div>
+				</div>
+			</div>
+
+		`
+
+	- stack y unstack.
+
+		- Ejemplo:
+
+			`
+
+				<div class="row small-stack medium-unstack">
+					<div class="columns">
+						<div class="callout primary">Columna 1</div>
+					</div>
+					<div class="columns">
+						<div class="callout primary">Columna 2</div>
+					</div>
+					<div class="columns">
+						<div class="callout primary">Columna 3</div>
+					</div>
+					<div class="columns">
+						<div class="callout primary">Columna 4</div>
+					</div>
+				</div>
+
+			`
+
+- Alineación y Orden en Flex Grid:
+
+	- align-(center/right/justify/spaced): alinea las columnas para la dirección donde se indique. (horizontal)
+	- align-self-(top/middle/bottom): alinea las columnas para la dirección donde se indique. (vertical)
+
+	- (large/small)-order-(numero): orden de las columnas en la página según el tamaño de la pantalla. Hay que asignarle el numero de orden a todos los elementos.
+
