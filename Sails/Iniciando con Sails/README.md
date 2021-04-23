@@ -86,3 +86,52 @@
     - Supongamos que tenemos un restaurante de comida rápida. El Modelo es lo que queremos del restaurante, es decir, lo que importa de ese sistema es quién prepara la comida. Siendo los cocineros quienes representan el Modelo, la lógica del negocio o el objetivo del sistema. La Vista es quién nos atiende, tal como la persona que opera la caja, toma la orden e interactúa con el usuario. El Controlador, es una persona que está entre el cocinero y el cajero. Es el empleado al que le llega la orden del cajero, completa la misma y la coloca en el estante para que la persona que atiende se la dé al cliente. Siendo él, el que refleja los cambios.
 
     - El flujo general de MVC se puede ilustrar a través del siguiente ejemplo. Cuando un usuario presiona un botón en la interfaz, se activa un Controlador, quien cambia el Modelo, y decide qué Vista despachar y se la manda al usuario.
+
+## Sails e MVC
+
+	- A continuación comenzaremos con una breve introducción a los Frameworks Web MVC que existen en el mercado: 
+
+    	- Ruby on Rails que está escrito en un Ruby para los programadores en este lenguaje de programación.
+    	- Django qué es para entornos Python.
+    	- Laravel para PHP.
+    	- Spring que es para desarrollos en Java.
+    	- SailsJS que se emplea para Node y que estudiaremos a continuación.
+
+### Características de Sails
+
+	- Las características de Sails son las siguientes:
+
+    	- Está escrito en el lenguaje de programación Node.js o más específicamente en JavaScript, lo que implica que todos los programas construidos usados en Node corren bajo este framework.
+    	- Desde el punto de vista arquitectónico, sigue el patrón MVC, es decir que cuando estemos programando en ese framework veremos cada uno de los elementos de ese patrón explícitamente en el código, por lo tanto tendremos piezas de código que pertenezcan a un modelo, a una vista, o a un controlador.
+    	- Existe una herramienta de línea de comando denominada cli (command line interface). Los comandos cli permiten crear la aplicación, correr las pruebas de la aplicación, depurar la aplicación, entre otros. A través de los comandos cli podemos crear y agregar código para ir creciendo de forma ordenada como lo indica el framework.
+    	- Sails incluye la posibilidad de definir pruebas automatizadas y tiene un espacio para internacionalización, que significa que posee algunos paquetes para permitir que la aplicación esté en varios idiomas.
+    	- Sails también tiene un espacio para poner las políticas de seguridad.
+    	- El framework adicionalmente se integra con cualquier tecnología Frontend  o Frameworks Frontend, tales como Angular.
+
+### ORM
+
+	- Sails además cuenta con un ORM que es un componente que mapea los datos relacionales en orientado a objetos de Node, en este caso. El ORM se llama Waterline y es una capa de abstracción donde nos olvidamos de las bases de datos para trabajar con objetos. El ORM se encarga de traducir los objetos a los elementos de la base de datos.
+
+	- Waterline funciona para base de datos relacionales como MySQL pero también para Mongodb, Redis, Oracle y PostgreSQL, los cuales se incluyen entre los más de treinta manejadores de bases de datos que puede utilizar. 
+
+	- Esta capa nos permite observar las asociaciones orientadas a objetos a medida que navegamos entre los mismos, que se traducen en consultas a nuestra base de datos. La ventaja de esto es que el programador se abstrae de cómo está la base de datos implementada. Incluso la base de datos que se está utilizando puede cambiar en el tiempo, por ejemplo de MySQL a Postgres y el código sigue siendo el mismo; sólamente podría cambiar la configuración y algunos otros detalles muy específicos para el manejador.
+
+#### Apis Autogeneradas
+
+	- Otra de las características de Sails son las APIs autogeneradas. Con la ayuda de la línea de comando y a través de la definición correcta de los modelos, el framework crea un API REST con respuestas JSON estándares basadas en nuestros modelos, de forma automática. Por ejemplo, si tenemos la entidad persona y el modelo personas, se genera una petición GET persona que nos devuelve todas las personas o personas/id que nos retorna todas las personas con ese id, o una petición Post personas que crea una persona, o la petición Delete persona, que borra una persona. El comportamiento para todas estas peticiones HTTP  ya están elaboradas.
+
+## Primer App
+
+	- sails new
+		- --no-front-end (solo para APIs, no Aplicaciones Web).
+		- --fast (no instala los modulos, para crearla mas rapido).
+
+Se pueden asociar rutas a vistas (archivos estáticos).
+
+Creamos una ruta que vaya a un controlador, que se comunica con un modelo para luego despachar una vista (sails trabaja con un concepto llamado 'action').
+sails generate page contacto
+
+sails generate model Vendedor nombre:string desde:number
+					 [nombre modelo] [atributo:tipo]
+
+sails lift => iniciar app
